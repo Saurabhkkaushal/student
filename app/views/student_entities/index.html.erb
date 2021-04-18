@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Student Entities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Enroll no</th>
+      <th>Course</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_entities.each do |student_entity| %>
+      <tr>
+        <td><%= student_entity.name %></td>
+        <td><%= student_entity.email %></td>
+        <td><%= student_entity.address %></td>
+        <td><%= student_entity.enroll_no %></td>
+        <td><%= student_entity.course %></td>
+        <td><%= link_to 'Show', student_entity %></td>
+        <td><%= link_to 'Edit', edit_student_entity_path(student_entity) %></td>
+        <td><%= link_to 'Destroy', student_entity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student Entity', new_student_entity_path %>

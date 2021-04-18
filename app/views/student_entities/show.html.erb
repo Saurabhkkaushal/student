@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student_entity.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @student_entity.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @student_entity.address %>
+</p>
+
+<p>
+  <strong>Enroll no:</strong>
+  <%= @student_entity.enroll_no %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @student_entity.course %>
+</p>
+
+<%= link_to 'Edit', edit_student_entity_path(@student_entity) %> |
+<%= link_to 'Back', student_entities_path %>
